@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ title }}</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>	
+</head>
+<body>
+	<header>
+		<img src="/images/roku.svg" alt="Roku logo" width="90"><span>Welcome to My Website</span>
+		<nav>
+			<ul>
+				<li>Qing</li>
+				<li><i class="fas fa-user-circle"></i></li>
+				<li><i class="fas fa-cog"></i></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		{{{ body }}}
+	</main>
+
+	<footer>
+		<span>This is my first video application based on Vue.js+Node.js+Espress+MySqld.If you like it then share it.</span>
+
+
+		<ul>
+			<li>
+                <a href="https://www.facebook.com/?stype=lo&jlou=AfcuspW6LcwP9XatT6xcN5XFgc4uWo1rCzOKuFEQvCjnxD81ilzSC1jeD01pz16SoToPxGp1yy-OUbFKCAr-tCPD9qjtkTGoilt2YlrjXF1ASg&smuh=35645&lh=Ac-3FixBnD5nCjKG" target="_blank"><img src="/images/facebook.png" alt="facebook">
+			</li>
+			<li>
+                <a href="https://mobile.twitter.com/login" target="_blank"><img src="/images/twitter.png" alt="twitter">
+            </li>
+			<li>
+                <a href="https://plus.google.com/" target="_blank"><img src="/images/googleplus.png" alt="googleplus">
+			</li>
+			<li>
+                <a href="https://www.instagram.com/" target="_blank"><img src="/images/instagram.png" alt="instagram">
+			</li>
+		</ul>
+        <p class="copy">
+            &copy; 2018 The Awesome Company, Inc
+        </p>
+	</footer>
+  <script>
+    var appData = {
+      movies : {{{ data }}}
+    }
+  </script>
+	{{#if mainpage}}
+  	<script src="/js/main.js"></script>
+	{{/if}}
+
+	{{#if videopage}}
+		<script src="/js/videoVM.js"></script>
+	{{/if}}
+</body>
+</html>
